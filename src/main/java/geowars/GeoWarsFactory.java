@@ -1,18 +1,25 @@
 package geowars;
 
 import com.almasb.fxgl.core.math.FXGLMath;
-import com.almasb.fxgl.dsl.components.KeepOnScreenComponent;
+import com.almasb.fxgl.dsl.FXGL;
+import com.almasb.fxgl.dsl.components.*;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
 import com.almasb.fxgl.entity.components.CollidableComponent;
+import com.almasb.fxgl.particle.ParticleEmitters;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
-import geowars.component.PlayerComponent;
+import geowars.component.*;
+//import geowars.component.enemy.BouncerComponent;
+//import geowars.component.enemy.NewRunnerComponent;
+//import geowars.component.enemy.SeekerComponent;
+import geowars.component.enemy.WandererComponent;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static geowars.GeoWarsType.*;
@@ -68,16 +75,21 @@ public class GeoWarsFactory implements EntityFactory {
 
     @Spawns("Wanderer")
     public Entity spawnWanderer(SpawnData data) {
-//        boolean red = FXGLMath.randomBoolean((float) config.getRedEnemyChance());
-        var t = texture("Wanderer.png", 80, 80).brighter();
+        boolean red = FXGLMath.randomBoolean((float) config.getRedEnemyChance());
+
+        int moveSpeed = red ? config.getRedEnemyMoveSpeed()
+                : FXGLMath.random(100, config.getWandererMaxMoveSpeed());
+
+        var t = texture(red ? "RedWanderer.png" : "Wanderer.png", 80, 80).brighter();
+
         return entityBuilder()
                 .type(WANDERER)
                 .at(getRandomSpawnPoint())
                 .bbox(new HitBox(new Point2D(20, 20), BoundingShape.box(40, 40)))
                 .view(t)
-                //.with(new HealthComponent(red ? config.getRedEnemyHealth() : config.getEnemyHealth()))
+                .with(new HealthComponent(red ? config.getRedEnemyHealth() : config.getEnemyHealth()))
                 .with(new CollidableComponent(true))
-                //.with(new WandererComponent(moveSpeed, t, texture("wanderer_overlay.png", 80, 80)))
+                .with(new WandererComponent(moveSpeed, t, texture("wanderer_overlay.png", 80, 80)))
                 .build();
     }
 }

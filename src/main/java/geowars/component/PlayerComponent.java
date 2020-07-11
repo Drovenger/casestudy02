@@ -6,6 +6,10 @@ public class PlayerComponent extends Component {
     private int playerSpeed;
     private double speed;
 
+    @Override
+    public void onUpdate(double tpf) {
+        speed = tpf * playerSpeed;
+    }
 
     public PlayerComponent(int playerSpeed) {
         this.playerSpeed = playerSpeed;

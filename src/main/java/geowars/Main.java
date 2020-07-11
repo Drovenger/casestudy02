@@ -7,7 +7,7 @@ public class Main extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings settings) {
-        var isRelease = true;
+        var isRelease = false;
 
         settings.setWidth(1280);
         settings.setHeight(720);

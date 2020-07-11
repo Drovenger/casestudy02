@@ -42,6 +42,14 @@ public class Main extends GameApplication {
         settings.setVersion("1.1.0");
         settings.setIntroEnabled(isRelease);
         settings.setMainMenuEnabled(isRelease);
+        settings.setConfigClass(GeoWarsConfig.class);
+        settings.setExperimentalNative(false);
+        settings.setManualResizeEnabled(true);
+        settings.setApplicationMode(isRelease ? ApplicationMode.RELEASE : ApplicationMode.DEVELOPER);
+
+        if (!settings.isExperimentalNative()) {
+            settings.setFontUI("game_font_7.ttf");
+        }
     }
 
     @Override
@@ -51,7 +59,16 @@ public class Main extends GameApplication {
         onKey(KeyCode.S, () -> playerComponent.down());
         onKey(KeyCode.D, () -> playerComponent.right());
 
-        //onBtn(MouseButton.PRIMARY, () -> playerComponent.shoot(getInput().getMousePositionWorld()));
+        onBtn(MouseButton.PRIMARY, () -> playerComponent.shoot(getInput().getMousePositionWorld()));
+    }
+
+    @Override
+    protected void initGameVars(Map<String, Object> vars) {
+        vars.put("score", 0);
+        vars.put("multiplier", 1);
+        vars.put("kills", 0);
+        vars.put("lives", 3);
+        vars.put("weaponType", WeaponType.SINGLE);
     }
 
     @Override
@@ -64,6 +81,19 @@ public class Main extends GameApplication {
         player = spawn("Player");
         playerComponent = player.getComponent(PlayerComponent.class);
 
+        int dist = 100;
+
+        getGameScene().getViewport().setBounds(-dist, -dist, getAppWidth() * 2 + dist, getAppHeight() * 2 + dist);
+        getGameScene().getViewport().bindToEntity(player, getAppWidth() - dist, getAppHeight() - dist);
+
+        getWorldProperties().<Integer>addListener("multiplier", (prev, now) -> {
+            WeaponType current = geto("weaponType");
+            WeaponType newType = WeaponType.fromMultiplier(geti("multiplier"));
+
+            if (newType.isBetterThan(current)) {
+                set("weaponType", newType);
+            }
+        });
         run(() -> spawn("Wanderer"), Duration.seconds(1));
     }
 

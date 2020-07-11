@@ -73,6 +73,22 @@ public class GeoWarsFactory implements EntityFactory {
         return e;
     }
 
+    @Spawns("Bullet")
+    public Entity spawnBullet(SpawnData data) {
+        if (!getSettings().isExperimentalNative()) {
+            play("shoot" + (int) (Math.random() * 8 + 1) + ".wav");
+        }
+
+        return entityBuilder(data)
+                .type(BULLET)
+                .viewWithBBox("Bullet.png")
+                .with(new CollidableComponent(true))
+                .with(new ProjectileComponent(data.get("direction"), 1200))
+                .with(new BulletComponent())
+                .with(new OffscreenCleanComponent())
+                .build();
+    }
+
     @Spawns("Wanderer")
     public Entity spawnWanderer(SpawnData data) {
         boolean red = FXGLMath.randomBoolean((float) config.getRedEnemyChance());

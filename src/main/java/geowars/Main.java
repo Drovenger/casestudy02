@@ -3,6 +3,8 @@ package geowars;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
 
+import static com.almasb.fxgl.dsl.FXGL.*;
+
 public class Main extends GameApplication {
 
     @Override
@@ -15,6 +17,12 @@ public class Main extends GameApplication {
         settings.setVersion("1.1.0");
         settings.setIntroEnabled(isRelease);
         settings.setMainMenuEnabled(isRelease);
+    }
+
+    @Override
+    protected void initGame() {
+        getGameWorld().addEntityFactory(new GeoWarsFactory());
+        spawn("player");
     }
 
     public static void main(String[] args) {

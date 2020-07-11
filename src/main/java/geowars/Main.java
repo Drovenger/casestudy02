@@ -2,6 +2,7 @@ package geowars;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import javafx.util.Duration;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 
@@ -22,7 +23,8 @@ public class Main extends GameApplication {
     @Override
     protected void initGame() {
         getGameWorld().addEntityFactory(new GeoWarsFactory());
-        spawn("player");
+        spawn("Player");
+        run(()->spawn("Wanderer"), Duration.seconds(1));
     }
 
     public static void main(String[] args) {

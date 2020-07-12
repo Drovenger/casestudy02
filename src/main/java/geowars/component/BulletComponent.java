@@ -6,7 +6,6 @@ import com.almasb.fxgl.dsl.components.ProjectileComponent;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.entity.components.BoundingBoxComponent;
-import geowars.GeoWarsType;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;

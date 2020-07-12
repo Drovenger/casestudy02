@@ -7,12 +7,9 @@ import com.almasb.fxgl.app.GameSettings;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsWorld;
-//import geowars.collision.BulletPortalHandler;
-//import geowars.collision.PlayerCrystalHandler;
+import geowars.collision.PlayerCrystalHandler;
 import geowars.component.HealthComponent;
 import geowars.component.PlayerComponent;
-import javafx.event.Event;
-import javafx.event.EventType;
 import javafx.geometry.Point2D;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.KeyCode;
@@ -22,7 +19,6 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.util.Map;
-import java.util.function.Supplier;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getInput;
@@ -123,11 +119,7 @@ public class Main extends GameApplication {
         };
 
         physics.addCollisionHandler(bulletEnemy);
-//        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, SEEKER));
-//        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, RUNNER));
-//        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, BOUNCER));
-//        physics.addCollisionHandler(new BulletPortalHandler());
-//        physics.addCollisionHandler(new PlayerCrystalHandler());
+        physics.addCollisionHandler(new PlayerCrystalHandler());
 
         CollisionHandler playerEnemy = new CollisionHandler(PLAYER, WANDERER) {
             @Override
@@ -140,11 +132,7 @@ public class Main extends GameApplication {
                 deductScoreDeath();
             }
         };
-//
         physics.addCollisionHandler(playerEnemy);
-//        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, SEEKER));
-//        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, RUNNER));
-//        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, BOUNCER));
     }
 
     @Override
@@ -166,19 +154,6 @@ public class Main extends GameApplication {
         livesText.textProperty().bind(getip("lives").asString("Lives: %d"));
 
         getGameScene().addUINodes(multText, scoreText, livesText);
-
-        Text beware = getUIFactoryService().newText("Beware! Seekers get smarter every spawn!", Color.AQUA, 38);
-
-        addUINode(beware);
-
-        centerText(beware);
-
-        animationBuilder()
-                .duration(Duration.seconds(2))
-                .autoReverse(true)
-                .repeat(2)
-                .fadeIn(beware)
-                .buildAndPlay();
     }
 
     private void deductScoreDeath() {

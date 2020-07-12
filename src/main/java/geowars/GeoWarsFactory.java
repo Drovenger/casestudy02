@@ -1,20 +1,15 @@
 package geowars;
 
 import com.almasb.fxgl.core.math.FXGLMath;
-import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.dsl.components.*;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
 import com.almasb.fxgl.entity.components.CollidableComponent;
-import com.almasb.fxgl.particle.ParticleEmitters;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import geowars.component.*;
-//import geowars.component.enemy.BouncerComponent;
-//import geowars.component.enemy.NewRunnerComponent;
-//import geowars.component.enemy.SeekerComponent;
 import geowars.component.enemy.WandererComponent;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
@@ -52,11 +47,8 @@ public class GeoWarsFactory implements EntityFactory {
         canvas.getGraphicsContext2D().setStroke(new Color(0.138, 0.138, 0.375, 0.56));
 
         return entityBuilder()
-//                .type(GRID)
                 .from(data)
                 .view(canvas)
-//                .with(new GraphicsUpdateComponent(canvas.getGraphicsContext2D()))
-//                .with(new GridComponent(canvas.getGraphicsContext2D()))
                 .build();
     }
 
@@ -106,6 +98,33 @@ public class GeoWarsFactory implements EntityFactory {
                 .with(new HealthComponent(red ? config.getRedEnemyHealth() : config.getEnemyHealth()))
                 .with(new CollidableComponent(true))
                 .with(new WandererComponent(moveSpeed, t, texture("wanderer_overlay.png", 80, 80)))
+                .build();
+    }
+    @Spawns("Explosion")
+    public Entity spawnExplosion(SpawnData data) {
+        var e = entityBuilder()
+                .at(data.getX() - 40, data.getY() - 40)
+                .view(texture("explosion.png", 80 * 48, 80).toAnimatedTexture(48, Duration.seconds(0.75)).play())
+                .with(new ExpireCleanComponent(Duration.seconds(1.6)))
+                .build();
+
+        if (!getSettings().isExperimentalNative()) {
+            e.addComponent(new ExplosionParticleComponent());
+
+            play("explosion-0" + (int) (Math.random() * 8 + 1) + ".wav");
+        }
+
+        return e;
+    }
+    @Spawns("Crystal")
+    public Entity spawnCrystal(SpawnData data) {
+        return entityBuilder()
+                .type(CRYSTAL)
+                .from(data)
+                .scale(0.65, 0.65)
+                .viewWithBBox(texture("YellowCrystal.png").toAnimatedTexture(8, Duration.seconds(1)))
+                .with(new CollidableComponent(true))
+                .with(new CrystalComponent(), new ExpireCleanComponent(Duration.seconds(10)))
                 .build();
     }
 }

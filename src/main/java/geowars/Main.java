@@ -9,7 +9,7 @@ import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsWorld;
 //import geowars.collision.BulletPortalHandler;
 //import geowars.collision.PlayerCrystalHandler;
-//import geowars.component.HealthComponent;
+import geowars.component.HealthComponent;
 import geowars.component.PlayerComponent;
 import javafx.event.Event;
 import javafx.event.EventType;
@@ -94,7 +94,166 @@ public class Main extends GameApplication {
                 set("weaponType", newType);
             }
         });
+
+        getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
+            if (now == 0)
+                getDialogService().showMessageBox("Game Over. Your score: " + geti("score"), getGameController()::exit);
+        });
+
         run(() -> spawn("Wanderer"), Duration.seconds(1));
+    }
+
+    @Override
+    protected void initPhysics() {
+        PhysicsWorld physics = getPhysicsWorld();
+
+        CollisionHandler bulletEnemy = new CollisionHandler(BULLET, WANDERER) {
+            @Override
+            protected void onCollisionBegin(Entity bullet, Entity enemy) {
+                bullet.removeFromWorld();
+
+                HealthComponent hp = enemy.getComponent(HealthComponent.class);
+                hp.setValue(hp.getValue() - 1);
+
+                if (hp.getValue() == 0) {
+                    onDeath(enemy);
+                    enemy.removeFromWorld();
+                }
+            }
+        };
+
+        physics.addCollisionHandler(bulletEnemy);
+//        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, SEEKER));
+//        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, RUNNER));
+//        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, BOUNCER));
+//        physics.addCollisionHandler(new BulletPortalHandler());
+//        physics.addCollisionHandler(new PlayerCrystalHandler());
+
+        CollisionHandler playerEnemy = new CollisionHandler(PLAYER, WANDERER) {
+            @Override
+            protected void onCollisionBegin(Entity a, Entity b) {
+
+                getGameScene().getViewport().shakeTranslational(8);
+
+                a.setPosition(getRandomPoint());
+                b.removeFromWorld();
+                deductScoreDeath();
+            }
+        };
+//
+        physics.addCollisionHandler(playerEnemy);
+//        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, SEEKER));
+//        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, RUNNER));
+//        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, BOUNCER));
+    }
+
+    @Override
+    protected void initUI() {
+        Text scoreText = getUIFactoryService().newText("", Color.WHITE, 28);
+        scoreText.setTranslateX(60);
+        scoreText.setTranslateY(70);
+        scoreText.textProperty().bind(getip("score").asString());
+        scoreText.setStroke(Color.GOLD);
+
+        Text multText = getUIFactoryService().newText("", Color.WHITE, 28);
+        multText.setTranslateX(60);
+        multText.setTranslateY(90);
+        multText.textProperty().bind(getip("multiplier").asString("x %d"));
+
+        var livesText = getUIFactoryService().newText("", Color.WHITE, 24.0);
+        livesText.setTranslateX(60);
+        livesText.setTranslateY(110);
+        livesText.textProperty().bind(getip("lives").asString("Lives: %d"));
+
+        getGameScene().addUINodes(multText, scoreText, livesText);
+
+        Text beware = getUIFactoryService().newText("Beware! Seekers get smarter every spawn!", Color.AQUA, 38);
+
+        addUINode(beware);
+
+        centerText(beware);
+
+        animationBuilder()
+                .duration(Duration.seconds(2))
+                .autoReverse(true)
+                .repeat(2)
+                .fadeIn(beware)
+                .buildAndPlay();
+    }
+
+    private void deductScoreDeath() {
+        inc("lives", -1);
+        inc("score", -1000);
+        set("kills", 0);
+        set("multiplier", 1);
+
+        Text bonusText = getUIFactoryService().newText("-1000", Color.WHITE, 20);
+
+        addUINode(bonusText, 1100, 70);
+
+        animationBuilder()
+                .duration(Duration.seconds(0.5))
+                .onFinished(() -> {
+                    removeUINode(bonusText);
+                })
+                .interpolator(Interpolators.EXPONENTIAL.EASE_IN())
+                .translate(bonusText)
+                .from(new Point2D(bonusText.getTranslateX(), bonusText.getTranslateY()))
+                .to(new Point2D(bonusText.getTranslateX(), 0))
+                .buildAndPlay();
+    }
+
+    private Point2D getRandomPoint() {
+        return new Point2D(Math.random() * getAppWidth(), Math.random() * getAppHeight());
+    }
+
+    private void addScoreKill(Point2D enemyPosition) {
+        inc("kills", +1);
+
+        if (geti("kills") == 15) {
+            set("kills", 0);
+            inc("multiplier", +1);
+        }
+
+        final int multiplier = geti("multiplier");
+
+        inc("score", +100 * multiplier);
+
+        var shadow = new DropShadow(25, Color.WHITE);
+
+        Text bonusText = getUIFactoryService().newText("+100" + (multiplier == 1 ? "" : "x" + multiplier), Color.color(1, 1, 1, 0.8), 24);
+        bonusText.setStroke(Color.GOLD);
+        bonusText.setEffect(shadow);
+
+        var e = entityBuilder()
+                .at(enemyPosition)
+                .view(bonusText)
+                .buildAndAttach();
+
+        animationBuilder()
+                .onFinished(() -> e.removeFromWorld())
+                .interpolator(Interpolators.EXPONENTIAL.EASE_OUT())
+                .translate(e)
+                .from(enemyPosition)
+                .to(enemyPosition.subtract(0, 65))
+                .buildAndPlay();
+
+        animationBuilder()
+                .duration(Duration.seconds(0.35))
+                .autoReverse(true)
+                .repeat(2)
+                .interpolator(Interpolators.BOUNCE.EASE_IN())
+                .scale(e)
+                .from(new Point2D(1, 1))
+                .to(new Point2D(1.2, 0.85))
+                .buildAndPlay();
+    }
+
+    public void onDeath(Entity entity) {
+        spawn("Explosion", entity.getCenter());
+        spawn("Crystal", entity.getCenter());
+
+        addScoreKill(entity.getCenter());
     }
 
     public static void main(String[] args) {

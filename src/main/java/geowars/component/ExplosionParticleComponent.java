@@ -44,15 +44,9 @@ public class ExplosionParticleComponent extends ParticleComponent {
         emitter.setAccelerationFunction(() -> new Point2D(0, 0));
 
         var c = FXGLMath.randomColor().brighter().brighter();
-
-        //var c = Color.YELLOW;
         var name = "circle_05.png";
 
         emitter.setSourceImage(texture("particles/" + name, 32, 32).multiplyColor(c));
-
-//        if (index == names.length) {
-//            index = 0;
-//        }
 
         emitter.setAllowParticleRotation(true);
 

@@ -68,7 +68,6 @@ public class WandererComponent extends Component {
 
     private void adjustAngle(double tpf) {
         if (FXGLMath.randomBoolean(angleAdjustRate)) {
-            // never rotate further than 15 degrees
             directionAngle += Math.min(FXGLMath.toDegrees((FXGLMath.noise1D(tx) - 0.5)), 15);
         }
     }

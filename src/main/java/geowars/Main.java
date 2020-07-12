@@ -49,6 +49,19 @@ public class Main extends GameApplication {
     }
 
     @Override
+    protected void onPreInit() {
+        // preload explosion sprite sheet
+        getAssetLoader().loadTexture("explosion.png", 80 * 48, 80);
+
+        if (!getSettings().isExperimentalNative()) {
+            getSettings().setGlobalSoundVolume(0.2);
+            getSettings().setGlobalMusicVolume(0.2);
+
+            loopBGM("bgm.mp3");
+        }
+    }
+
+    @Override
     protected void initInput() {
         onKey(KeyCode.W, () -> playerComponent.up());
         onKey(KeyCode.A, () -> playerComponent.left());
@@ -78,9 +91,6 @@ public class Main extends GameApplication {
         playerComponent = player.getComponent(PlayerComponent.class);
 
         int dist = 100;
-
-        getGameScene().getViewport().setBounds(-dist, -dist, getAppWidth() * 2 + dist, getAppHeight() * 2 + dist);
-        getGameScene().getViewport().bindToEntity(player, getAppWidth() - dist, getAppHeight() - dist);
 
         getWorldProperties().<Integer>addListener("multiplier", (prev, now) -> {
             WeaponType current = geto("weaponType");

@@ -22,7 +22,7 @@ public class CrystalComponent extends Component {
 
     private void followPlayer(double tpf) {
         Entity player = getEntity().getWorld().getSingleton(GeoWarsType.PLAYER);
-        if (getEntity().distance(player) < 1500) {
+        if (getEntity().distance(player) < 300) {
             getEntity().translateTowards(player.getCenter(), 150 * tpf);
         }
     }

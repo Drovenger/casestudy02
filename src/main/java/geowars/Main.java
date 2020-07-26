@@ -38,12 +38,12 @@ public class Main extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings settings) {
-        var isRelease = false;
+        var isRelease = true;
 
-        settings.setWidth(1280);
-        settings.setHeight(720);
+        settings.setWidth(1920);
+        settings.setHeight(1080);
         settings.setTitle("FXGL Geometry Wars");
-        settings.setVersion("1.1.0");
+        settings.setVersion("2.1.0");
         settings.setIntroEnabled(isRelease);
         settings.setMainMenuEnabled(isRelease);
         settings.setConfigClass(GeoWarsConfig.class);
@@ -81,10 +81,10 @@ public class Main extends GameApplication {
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
-        vars.put("score", 70000);
+        vars.put("score", 0);
         vars.put("multiplier", 1);
         vars.put("kills", 0);
-        vars.put("lives", 300);
+        vars.put("lives", 3);
         vars.put("weaponType", WeaponType.SINGLE);
     }
 

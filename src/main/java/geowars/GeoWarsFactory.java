@@ -50,8 +50,11 @@ public class GeoWarsFactory implements EntityFactory {
         canvas.getGraphicsContext2D().setStroke(new Color(0.138, 0.138, 0.375, 0.56));
 
         return entityBuilder()
+                .type(GRID)
                 .from(data)
                 .view(canvas)
+                .with(new GraphicsUpdateComponent(canvas.getGraphicsContext2D()))
+                .with(new GridComponent(canvas.getGraphicsContext2D()))
                 .build();
     }
 

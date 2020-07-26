@@ -6,6 +6,7 @@ import com.almasb.fxgl.dsl.components.ProjectileComponent;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.entity.components.BoundingBoxComponent;
+import geowars.GeoWarsType;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -17,6 +18,10 @@ public class BulletComponent extends Component {
 
     private static final Color PARTICLE_COLOR = Color.YELLOW.brighter();
     private static final Duration PARTICLE_DURATION = Duration.seconds(1.2);
+
+    static {
+        //ExhaustParticleComponent.colorImage(PARTICLE_COLOR);
+    }
 
     private BoundingBoxComponent bbox;
 
@@ -39,6 +44,10 @@ public class BulletComponent extends Component {
 
     @Override
     public void onUpdate(double tpf) {
+        byType(GeoWarsType.GRID).forEach(g -> {
+            var grid = g.getComponent(GridComponent.class);
+            grid.applyExplosiveForce(velocity.magnitude() / 60 * 18, bbox.getCenterWorld(), 80 * 60 * tpf);
+        });
 
         if (bbox.getMinXWorld() < 0) {
             spawnParticles(0, bbox.getCenterWorld().getY(), 1, FXGLMath.random(-1.0f, 1.0f));
@@ -57,6 +66,7 @@ public class BulletComponent extends Component {
     private void spawnParticles(double x, double y, double dirX, double dirY) {
         entityBuilder()
                 .at(x, y)
+                //.view(new Texture(ExhaustParticleComponent.coloredImages.get(PARTICLE_COLOR)))
                 .with(new ProjectileComponent(new Point2D(dirX, dirY), FXGLMath.random(150, 280)))
                 .with(new ExpireCleanComponent(PARTICLE_DURATION))
                 .with(new ParticleControl())
@@ -67,7 +77,7 @@ public class BulletComponent extends Component {
         @Override
         public void onUpdate(double tpf) {
             ProjectileComponent control = entity.getComponent(ProjectileComponent.class);
-            control.setSpeed(control.getSpeed() * (1 - 3 * tpf));
+            control.setSpeed(control.getSpeed() * (1 - 3*tpf));
         }
     }
 }

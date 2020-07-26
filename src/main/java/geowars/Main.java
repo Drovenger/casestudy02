@@ -40,8 +40,8 @@ public class Main extends GameApplication {
     protected void initSettings(GameSettings settings) {
         var isRelease = true;
 
-        settings.setWidth(1920);
-        settings.setHeight(1080);
+        settings.setWidth(1280);
+        settings.setHeight(720);
         settings.setTitle("FXGL Geometry Wars");
         settings.setVersion("2.1.0");
         settings.setIntroEnabled(isRelease);
@@ -114,7 +114,8 @@ public class Main extends GameApplication {
 
         getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
             if (now == 0)
-                getDialogService().showMessageBox("Demo Over. Your score: " + geti("score"), getGameController()::exit);
+                getDialogService().showMessageBox("Game Over! Your score: " + geti("score"), getGameController()::gotoIntro);
+
         });
 
         eventBuilder()
@@ -134,7 +135,7 @@ public class Main extends GameApplication {
                 .buildAndStart();
 
         eventBuilder()
-                .when((Supplier<Boolean>) () -> geti("score") >= 70000)
+                .when((Supplier<Boolean>) () -> geti("score") >= 100000)
                 .thenFire((Supplier<Event>) () -> {
                     run(() -> spawn("Runner"), Duration.seconds(3));
                     return new Event(EventType.ROOT);
@@ -235,7 +236,7 @@ public class Main extends GameApplication {
 
         final int multiplier = geti("multiplier");
 
-        inc("score", +100*multiplier);
+        inc("score", +100 * multiplier);
 
         var shadow = new DropShadow(25, Color.WHITE);
 

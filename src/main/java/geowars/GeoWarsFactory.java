@@ -12,6 +12,7 @@ import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import geowars.component.*;
 import geowars.component.enemy.BouncerComponent;
+import geowars.component.enemy.RunnerComponent;
 import geowars.component.enemy.SeekerComponent;
 import geowars.component.enemy.WandererComponent;
 import javafx.geometry.Point2D;
@@ -124,6 +125,19 @@ public class GeoWarsFactory implements EntityFactory {
                 .with(new HealthComponent(red ? config.getRedEnemyHealth() : config.getEnemyHealth()))
                 .with(new CollidableComponent(true))
                 .with(new SeekerComponent(FXGL.<Main>getAppCast().getPlayer(), moveSpeed,t,texture("Seeker_overlay.png")))
+                .build();
+    }
+
+    @Spawns("Runner")
+    public Entity spawnRunner(SpawnData data) {
+        return entityBuilder()
+                .type(RUNNER)
+                .at(getRandomSpawnPoint())
+                .viewWithBBox(texture("Runner.png", 258 * 0.25, 220 * 0.25))
+                .with(new HealthComponent(config.getEnemyHealth()))
+                .with(new CollidableComponent(true))
+                .with(new RunnerComponent(config.getRunnerMoveSpeed()))
+                .with(new AutoRotationComponent().withSmoothing())
                 .build();
     }
 

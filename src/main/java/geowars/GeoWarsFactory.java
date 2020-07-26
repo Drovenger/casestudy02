@@ -111,15 +111,16 @@ public class GeoWarsFactory implements EntityFactory {
         int moveSpeed = red ? config.getRedEnemyMoveSpeed()
                 : FXGLMath.random(150, config.getSeekerMaxMoveSpeed());
 
-        var t = texture(red ? "RedSeeker.png" : "Seeker.png", 80, 80).brighter();
+        var t = texture(red ? "RedSeeker.png" : "Seeker.png", 60, 60).brighter();
 
         return entityBuilder()
                 .type(SEEKER)
                 .at(getRandomSpawnPoint())
                 .viewWithBBox(texture("Seeker.png", 60, 60).brighter())
+                .view(t)
                 .with(new HealthComponent(red ? config.getRedEnemyHealth() : config.getEnemyHealth()))
                 .with(new CollidableComponent(true))
-                .with(new SeekerComponent(FXGL.<Main>getAppCast().getPlayer(), moveSpeed,t))
+                .with(new SeekerComponent(FXGL.<Main>getAppCast().getPlayer(), moveSpeed,t,texture("Seeker_overlay.png")))
                 .build();
     }
 

@@ -37,7 +37,7 @@ public class WandererComponent extends Component {
         screenHeight = FXGL.getAppHeight();
         this.moveSpeed = moveSpeed;
         this.texture = texture;
-        saturatedTexture = overlay.toColor(Color.YELLOW);
+        saturatedTexture = overlay.toColor(Color.GOLD);
     }
 
     @Override

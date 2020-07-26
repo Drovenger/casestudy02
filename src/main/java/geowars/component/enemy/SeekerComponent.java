@@ -26,13 +26,15 @@ public class SeekerComponent extends Component {
 
     private Texture overlay;
     private Texture texture;
+    private Texture saturatedTexture;
 
     private int moveSpeed;
 
-    public SeekerComponent(Entity player, int moveSpeed, Texture texture) {
+    public SeekerComponent(Entity player, int moveSpeed, Texture texture,Texture overlay) {
         this.player = player;
         this.moveSpeed = moveSpeed;
         this.texture = texture;
+        saturatedTexture = overlay.toColor(Color.RED);
 
         if (seekerAdjustDelay > 0) {
             seekerAdjustDelay -= 0.15;

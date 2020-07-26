@@ -10,6 +10,7 @@ import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import geowars.component.*;
+import geowars.component.enemy.BouncerComponent;
 import geowars.component.enemy.WandererComponent;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
@@ -100,6 +101,23 @@ public class GeoWarsFactory implements EntityFactory {
                 .with(new WandererComponent(moveSpeed, t, texture("wanderer_overlay.png", 80, 80)))
                 .build();
     }
+
+
+
+    @Spawns("Bouncer")
+    public Entity spawnBouncer(SpawnData data) {
+        double y = FXGLMath.random(0, getAppHeight() - 40);
+
+        return entityBuilder()
+                .type(BOUNCER)
+                .at(0, y)
+                .viewWithBBox(texture("Bouncer.png", 254 * 0.25, 304 * 0.25))
+                .with(new HealthComponent(config.getEnemyHealth()))
+                .with(new CollidableComponent(true))
+                .with(new BouncerComponent(config.getBouncerMoveSpeed()))
+                .build();
+    }
+
     @Spawns("Explosion")
     public Entity spawnExplosion(SpawnData data) {
         var e = entityBuilder()

@@ -10,6 +10,8 @@ import com.almasb.fxgl.physics.PhysicsWorld;
 import geowars.collision.PlayerCrystalHandler;
 import geowars.component.HealthComponent;
 import geowars.component.PlayerComponent;
+import javafx.event.Event;
+import javafx.event.EventType;
 import javafx.geometry.Point2D;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.KeyCode;
@@ -19,14 +21,20 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.util.Map;
+import java.util.function.Supplier;
 
 import static com.almasb.fxgl.dsl.FXGL.*;
 import static com.almasb.fxgl.dsl.FXGLForKtKt.getInput;
 import static geowars.GeoWarsType.*;
 
 public class Main extends GameApplication {
+
     private Entity player;
     private PlayerComponent playerComponent;
+
+    public Entity getPlayer() {
+        return player;
+    }
 
     @Override
     protected void initSettings(GameSettings settings) {
@@ -76,7 +84,7 @@ public class Main extends GameApplication {
         vars.put("score", 0);
         vars.put("multiplier", 1);
         vars.put("kills", 0);
-        vars.put("lives", 5);
+        vars.put("lives", 300);
         vars.put("weaponType", WeaponType.SINGLE);
     }
 
@@ -90,7 +98,10 @@ public class Main extends GameApplication {
         player = spawn("Player");
         playerComponent = player.getComponent(PlayerComponent.class);
 
-        int dist = 100;
+        int dist = 200;
+
+        getGameScene().getViewport().setBounds(-dist, -dist, getAppWidth() + dist, getAppHeight() + dist);
+        getGameScene().getViewport().bindToEntity(player, getAppWidth() / 2, getAppHeight() / 2);
 
         getWorldProperties().<Integer>addListener("multiplier", (prev, now) -> {
             WeaponType current = geto("weaponType");
@@ -103,10 +114,34 @@ public class Main extends GameApplication {
 
         getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
             if (now == 0)
-                getDialogService().showMessageBox("Game Over. Your score: " + geti("score"), getGameController()::exit);
+                getDialogService().showMessageBox("Demo Over. Your score: " + geti("score"), getGameController()::exit);
         });
 
-        run(() -> spawn("Wanderer"), Duration.seconds(1));
+        eventBuilder()
+                .when((Supplier<Boolean>) () -> geti("score") >= 10000)
+                .thenFire((Supplier<Event>) () -> {
+                    run(() -> spawn("Bouncer"), Duration.seconds(5));
+                    return new Event(EventType.ROOT);
+                })
+                .buildAndStart();
+
+        eventBuilder()
+                .when((Supplier<Boolean>) () -> geti("score") >= 50000)
+                .thenFire((Supplier<Event>) () -> {
+                    run(() -> spawn("Seeker"), Duration.seconds(2));
+                    return new Event(EventType.ROOT);
+                })
+                .buildAndStart();
+
+        eventBuilder()
+                .when((Supplier<Boolean>) () -> geti("score") >= 70000)
+                .thenFire((Supplier<Event>) () -> {
+                    run(() -> spawn("Runner"), Duration.seconds(3));
+                    return new Event(EventType.ROOT);
+                })
+                .buildAndStart();
+
+        run(() -> spawn("Wanderer"), Duration.seconds(1.5));
     }
 
     @Override
@@ -129,6 +164,9 @@ public class Main extends GameApplication {
         };
 
         physics.addCollisionHandler(bulletEnemy);
+        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, SEEKER));
+        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, RUNNER));
+        physics.addCollisionHandler(bulletEnemy.copyFor(BULLET, BOUNCER));
         physics.addCollisionHandler(new PlayerCrystalHandler());
 
         CollisionHandler playerEnemy = new CollisionHandler(PLAYER, WANDERER) {
@@ -142,7 +180,11 @@ public class Main extends GameApplication {
                 deductScoreDeath();
             }
         };
+
         physics.addCollisionHandler(playerEnemy);
+        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, SEEKER));
+        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, RUNNER));
+        physics.addCollisionHandler(playerEnemy.copyFor(PLAYER, BOUNCER));
     }
 
     @Override
@@ -164,27 +206,18 @@ public class Main extends GameApplication {
         livesText.textProperty().bind(getip("lives").asString("Lives: %d"));
 
         getGameScene().addUINodes(multText, scoreText, livesText);
-    }
 
-    private void deductScoreDeath() {
-        inc("lives", -1);
-        inc("score", -1000);
-        set("kills", 0);
-        set("multiplier", 1);
+        Text beware = getUIFactoryService().newText("Beware! Seekers get smarter every spawn!", Color.AQUA, 38);
 
-        Text bonusText = getUIFactoryService().newText("-1000", Color.WHITE, 20);
+        addUINode(beware);
 
-        addUINode(bonusText, 1100, 70);
+        centerText(beware);
 
         animationBuilder()
-                .duration(Duration.seconds(0.5))
-                .onFinished(() -> {
-                    removeUINode(bonusText);
-                })
-                .interpolator(Interpolators.EXPONENTIAL.EASE_IN())
-                .translate(bonusText)
-                .from(new Point2D(bonusText.getTranslateX(), bonusText.getTranslateY()))
-                .to(new Point2D(bonusText.getTranslateX(), 0))
+                .duration(Duration.seconds(2))
+                .autoReverse(true)
+                .repeat(2)
+                .fadeIn(beware)
                 .buildAndPlay();
     }
 
@@ -202,7 +235,7 @@ public class Main extends GameApplication {
 
         final int multiplier = geti("multiplier");
 
-        inc("score", +100 * multiplier);
+        inc("score", +100*multiplier);
 
         var shadow = new DropShadow(25, Color.WHITE);
 
@@ -231,6 +264,28 @@ public class Main extends GameApplication {
                 .scale(e)
                 .from(new Point2D(1, 1))
                 .to(new Point2D(1.2, 0.85))
+                .buildAndPlay();
+    }
+
+    private void deductScoreDeath() {
+        inc("lives", -1);
+        inc("score", -1000);
+        set("kills", 0);
+        set("multiplier", 1);
+
+        Text bonusText = getUIFactoryService().newText("-1000", Color.WHITE, 20);
+
+        addUINode(bonusText, 1100, 70);
+
+        animationBuilder()
+                .duration(Duration.seconds(0.5))
+                .onFinished(() -> {
+                    removeUINode(bonusText);
+                })
+                .interpolator(Interpolators.EXPONENTIAL.EASE_IN())
+                .translate(bonusText)
+                .from(new Point2D(bonusText.getTranslateX(), bonusText.getTranslateY()))
+                .to(new Point2D(bonusText.getTranslateX(), 0))
                 .buildAndPlay();
     }
 

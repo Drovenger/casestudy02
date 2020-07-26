@@ -12,10 +12,11 @@ public enum WeaponType {
     }
 
     public static WeaponType fromMultiplier(int multiplier) {
-//        if (multiplier > 100) return MIRROR;
-//        if (multiplier > 10) return RICOCHET;
-        if (multiplier > 50) return TRIPLE;
+        if (multiplier > 100) return MIRROR;
+        if (multiplier > 50) return RICOCHET;
+        if (multiplier > 25) return TRIPLE;
         if (multiplier > 10) return DOUBLE;
+
         return SINGLE;
     }
 }

@@ -6,6 +6,7 @@ public final class GeoWarsConfig {
     private int redEnemyHealth = 3;
     private int redEnemyMoveSpeed = 300;
     private int wandererMaxMoveSpeed = 150;
+    private int bouncerMoveSpeed = 500;
 
     private int playerSpeed = 350;
 
@@ -26,6 +27,8 @@ public final class GeoWarsConfig {
     public int getWandererMaxMoveSpeed() {
         return wandererMaxMoveSpeed;
     }
+
+    public int getBouncerMoveSpeed() { return bouncerMoveSpeed; }
 
     public int getPlayerSpeed() {
         return playerSpeed;

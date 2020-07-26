@@ -1,9 +1,11 @@
 package geowars;
 
+import static com.almasb.fxgl.dsl.FXGLForKtKt.geti;
+
 public final class GeoWarsConfig {
 
     private double redEnemyChance = 0.25;
-    private int redEnemyHealth = 10;
+    private int redEnemyHealth = geti("multiplier");
     private int redEnemyMoveSpeed = 300;
     private int wandererMaxMoveSpeed = 150;
     private int bouncerMoveSpeed = 500;

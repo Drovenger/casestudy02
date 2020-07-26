@@ -81,7 +81,7 @@ public class Main extends GameApplication {
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
-        vars.put("score", 50000);
+        vars.put("score", 0);
         vars.put("multiplier", 1);
         vars.put("kills", 0);
         vars.put("lives", 300);

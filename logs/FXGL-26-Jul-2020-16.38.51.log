@@ -1,0 +1,1632 @@
+16:37:26.445 [main                     ] DEBUG GameApplication      - Logger initialized
+16:37:26.459 [main                     ] DEBUG GameApplication      - Logging settings
+Title: FXGL Geometry Wars
+Version: 1.1.0
+Width: 1280
+Height: 720
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.app.scene.SceneFactory
+
+16:37:26.812 [JavaFX Application Thread] DEBUG GameApplication      - Initializing FXGL
+16:37:26.822 [JavaFX Application Thread] INFO  Engine               - FXGL-11.9 (27.05.2020 17.06) on WINDOWS (J:11.0.7 FX:13.0.2)
+16:37:26.822 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+16:37:26.822 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Windows 10 version 10.0
+16:37:26.823 [JavaFX Application Thread] DEBUG Engine               - Architecture: amd64
+16:37:26.823 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+16:37:26.823 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+16:37:26.933 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+16:37:26.993 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 1280.0 x 720.0
+16:37:26.993 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    1280.0 x 720.0
+16:37:26.993 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+16:37:26.995 [JavaFX Application Thread] DEBUG MainWindow           - Set initial scene to FXGLStartupScene
+16:37:27.000 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+16:37:27.094 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (16.0, 39.0)
+16:37:27.094 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 1280.0 x 720.0
+16:37:27.094 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+16:37:27.095 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 1280.0 x 720.0
+16:37:27.095 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 1296.0 x 759.0
+16:37:27.103 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+16:37:27.130 [FXGL Background Thread 1 ] DEBUG WindowService        - Applying CSS: fxgl_dark.css
+16:37:27.131 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/css/fxgl_dark.css
+16:37:27.186 [FXGL Background Thread 1 ] DEBUG WindowService        - Initializing application scenes
+16:37:27.217 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+16:37:27.261 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=720, physics.ppm=50.0
+16:37:27.264 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1280x720
+16:37:27.286 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/particles/trace_horizontal.png
+16:37:27.333 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyGameMenu()
+16:37:27.346 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+16:37:27.350 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/particles/smoke.png
+16:37:27.390 [FXGL Background Thread 1 ] DEBUG WindowService        - Application scenes initialized
+16:37:27.399 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+16:37:27.402 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: D:\CodeGym\casestudy02\system\fxgl.bundle
+16:37:27.405 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+16:37:27.406 [FXGL Background Thread 1 ] INFO  Engine               - FXGL initialization took: 0.301 sec
+16:37:27.407 [FXGL Background Thread 1 ] DEBUG GameApplication      - Loading localizations
+16:37:27.407 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/english.lang
+16:37:27.417 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/french.lang
+16:37:27.418 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/german.lang
+16:37:27.419 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/hungarian.lang
+16:37:27.422 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/languages/russian.lang
+16:37:27.423 [FXGL Background Thread 1 ] DEBUG GameApplication      - Registering font factories with UI factory
+16:37:27.423 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/game_font_7.ttf
+16:37:27.648 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/Abel-Regular.ttf
+16:37:27.651 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/lucida_console.ttf
+16:37:27.657 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/fonts/Courier-Prime.ttf
+16:37:27.669 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action0 - W
+16:37:27.670 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action1 - A
+16:37:27.670 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action2 - S
+16:37:27.670 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action3 - D
+16:37:27.671 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action4 - LMB
+16:37:27.671 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/explosion.png
+16:37:27.858 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/music/bgm.mp3
+16:37:27.972 [JavaFX Application Thread] DEBUG AudioPlayer          - Playing music com.almasb.fxgl.audio.Music@fbd5917
+16:37:27.973 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/fxgl_icon.png
+16:37:27.981 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/ui/cursors/fxgl_default.png
+16:37:27.983 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+16:37:27.983 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+16:37:27.984 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+16:37:27.984 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+16:37:27.999 [JavaFX Application Thread] DEBUG FXGLStartupScene     - STARTUP
+16:37:27.999 [JavaFX Application Thread] DEBUG WindowService        - Starting new game
+16:37:27.999 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:37:28.009 [JavaFX Application Thread] DEBUG WindowService        - Removing overlay from FXGLStartupScene and adding to FXGLLoadingScene
+16:37:28.009 [JavaFX Application Thread] DEBUG MainWindow           - FXGLStartupScene -> FXGLLoadingScene
+16:37:28.009 [JavaFX Application Thread] DEBUG WindowService        - Clearing previous game
+16:37:28.009 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+16:37:28.009 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+16:37:28.009 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+16:37:28.010 [FXGL Background Thread 1 ] DEBUG GameApplication      - Initializing game
+16:37:28.026 [FXGL Background Thread 1 ] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Player.png
+16:37:28.048 [FXGL Background Thread 1 ] INFO  GameApplication      - Game initialization took: 0.038 sec
+16:37:28.079 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:37:28.086 [JavaFX Application Thread] DEBUG WindowService        - Removing overlay from FXGLLoadingScene and adding to GameScene
+16:37:28.087 [JavaFX Application Thread] DEBUG MainWindow           - FXGLLoadingScene -> GameScene
+16:37:29.611 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/RedWanderer.png
+16:37:29.622 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/wanderer_overlay.png
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - Logging environment variables
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - achievements: []
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - appIcon: fxgl_icon.png
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - applicationMode: DEVELOPER
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - configClass: Optional[class geowars.GeoWarsConfig]
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - credits: []
+16:37:30.407 [FXGL Background Thread 2 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - enabledMenuItems: []
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.GameApplication$GameApplicationService, class com.almasb.fxgl.app.services.WindowService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.event.EventBusService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.AssetLoaderService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - fontMono: lucida_console.ttf
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - fontUI: game_font_7.ttf
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - gameDifficulty: MEDIUM
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - globalMusicVolume: 0.5
+16:37:30.408 [FXGL Background Thread 2 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.2]
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - globalSoundVolume: 0.5
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.2]
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - height: 720
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isAndroid: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isBrowser: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isClickFeedbackEnabled: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isCloseConfirmation: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isDesktop: true
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isDeveloperMenuEnabled: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isExperimentalNative: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isFullScreenAllowed: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isFullScreenFromStart: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isGameMenuEnabled: true
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isIOS: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isIntroEnabled: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isLinux: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isMac: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isMainMenuEnabled: false
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isManualResizeEnabled: true
+16:37:30.409 [FXGL Background Thread 2 ] DEBUG Engine               - isMobile: false
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - isPreserveResizeRatio: false
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - isProfilingEnabled: false
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - isSingleStep: false
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - isUserProfileEnabled: false
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - isWindows: true
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - mainWindow: com.almasb.fxgl.app.MainWindow@581c7c53
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - menuKey: ESCAPE
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - pixelsPerMeter: 50.0
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - platform: WINDOWS
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - profileDir: profiles/
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - randomSeed: -1
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=WINDOWS, version=11.9, build=27.05.2020 17.06)
+16:37:30.410 [FXGL Background Thread 2 ] DEBUG Engine               - saveFileExt: sav
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - sceneFactory: com.almasb.fxgl.app.scene.SceneFactory@1a9106a0
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - secondsIn24h: 60
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - settings: Title: FXGL Geometry Wars
+Version: 1.1.0
+Width: 1280
+Height: 720
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.app.scene.SceneFactory
+
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - soundNotification: core/notification.wav
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - stageStyle: DECORATED
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - title: FXGL Geometry Wars
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - version: 1.1.0
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - versionCheckDays: 7
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - width: 1280
+16:37:30.411 [FXGL Background Thread 2 ] DEBUG Engine               - Logging services
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.GameApplication$GameApplicationService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.WindowService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.event.EventBusService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.AssetLoaderService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+16:37:30.412 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+16:37:30.413 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+16:37:30.413 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+16:37:30.413 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+16:37:30.413 [FXGL Background Thread 2 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+16:37:30.877 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot1.wav
+16:37:30.886 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Bullet.png
+16:37:30.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot4.wav
+16:37:30.989 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:31.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:31.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:31.147 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:37:31.151 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:31.227 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot8.wav
+16:37:31.230 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:31.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:31.280 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/particles/circle_05.png
+16:37:31.290 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-05.wav
+16:37:31.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/YellowCrystal.png
+16:37:31.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot3.wav
+16:37:31.406 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:31.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot7.wav
+16:37:31.533 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:31.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:31.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.076 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot2.wav
+16:37:32.078 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.187 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:32.187 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.299 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:32.299 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:32.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.539 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:32.539 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.651 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:32.651 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.668 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:32.668 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:32.668 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-07.wav
+16:37:32.670 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:32.731 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Wanderer.png
+16:37:32.737 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:32.763 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:32.763 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:32.891 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:32.891 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:33.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.387 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot5.wav
+16:37:33.388 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:33.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.611 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/shoot6.wav
+16:37:33.614 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:33.661 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:33.662 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-04.wav
+16:37:33.664 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:33.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:33.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:33.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:33.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:33.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:34.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:34.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:34.251 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:37:34.252 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:34.381 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:34.381 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:34.381 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-05.wav
+16:37:34.381 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:35.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:35.772 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:37.276 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:37:37.278 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:37.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:37.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:37.691 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:37.691 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:37.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:37.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:37.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:37.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:38.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:38.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:38.092 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:38.092 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:38.093 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:37:38.093 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:38.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:38.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:38.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:38.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:38.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:38.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:38.763 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:38.764 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:39.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:39.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:39.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:39.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:39.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:39.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:39.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:39.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:39.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:39.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:39.867 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:39.867 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:40.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:40.268 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:40.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:40.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:40.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:40.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:40.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:40.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:40.893 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:40.893 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.019 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:41.019 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:41.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:41.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:41.165 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-02.wav
+16:37:41.165 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:41.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:41.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.371 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:41.371 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.707 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:41.708 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:41.772 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:41.819 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:41.819 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:41.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:41.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:42.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:42.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:42.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:42.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:42.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.539 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:42.540 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:42.540 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:37:42.540 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:42.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:42.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:42.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:42.796 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:42.796 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:37:42.796 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:42.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:42.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:43.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:43.325 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:43.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:43.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:43.675 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:43.675 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:43.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:43.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:43.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:43.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:44.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:44.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:44.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:44.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:44.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-06.wav
+16:37:44.062 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:44.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:44.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:44.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:44.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:44.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:44.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:44.811 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:44.812 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:45.387 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:45.387 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:45.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:45.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:45.611 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:45.611 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:45.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:45.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:45.628 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-05.wav
+16:37:45.628 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:45.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:45.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:45.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:45.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:45.964 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:45.964 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:46.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:46.332 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:47.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:47.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:47.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:47.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:47.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:47.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:47.115 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:37:47.116 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:47.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:47.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:47.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:47.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:47.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:47.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:47.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:47.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:47.852 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:47.853 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:48.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:48.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:48.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.332 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:48.332 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.332 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:48.332 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.444 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:48.444 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.444 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:48.444 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.557 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:48.557 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.557 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:48.557 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:48.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:48.620 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-03.wav
+16:37:48.621 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:48.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:48.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:48.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:48.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:49.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:49.212 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:49.212 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:37:49.212 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:49.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:37:49.356 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:50.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:50.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:50.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:50.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:50.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:50.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:50.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:50.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:50.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:50.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:50.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:50.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:50.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:50.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:50.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:50.876 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:50.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:50.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:50.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:50.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:51.083 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:51.083 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:51.083 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:37:51.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:51.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:51.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:51.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:51.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:51.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:51.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:51.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:51.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:51.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:51.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:51.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:51.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:52.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:52.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:52.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:52.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:52.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:52.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:52.955 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:52.955 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:52.956 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:52.956 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:53.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:53.084 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:53.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:53.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.276 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:53.276 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:53.276 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:37:53.276 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:53.291 [JavaFX Application Thread] DEBUG EventBus             - Firing event: javafx.event.Event[source=javafx.event.Event$$Lambda$112/0x000000080021f040@657c74c2]
+16:37:53.307 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:53.307 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.307 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:53.307 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.435 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:53.435 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.435 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:53.435 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:53.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:53.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:54.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:54.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:54.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:54.220 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.221 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:54.221 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:54.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:54.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:54.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:37:54.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:54.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.556 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:54.556 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:54.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:54.668 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:37:54.668 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:54.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:37:54.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:54.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:54.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:54.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:54.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:54.828 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:37:54.828 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:54.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:54.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:54.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:54.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:55.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:55.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:55.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:55.067 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:55.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:55.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:55.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:55.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:55.484 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:55.484 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:56.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:37:56.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:58.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Bouncer.png
+16:37:58.475 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:58.475 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.475 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:58.475 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:37:58.508 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:37:58.587 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:58.587 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.588 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:58.588 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.716 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:58.716 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.716 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:58.716 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:58.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:37:58.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:37:58.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:37:58.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:37:58.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:37:58.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:58.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:58.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:37:58.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:59.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:59.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:59.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:59.068 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:59.179 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:37:59.179 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:59.179 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:37:59.179 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:59.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:37:59.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:37:59.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:37:59.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:00.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:00.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:00.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:00.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:00.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:00.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:00.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:00.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:38:00.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:00.299 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:00.299 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.299 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:00.299 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:00.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:00.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:00.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:00.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:00.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:01.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:01.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:01.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:01.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:01.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:01.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.547 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:01.548 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:01.595 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:01.595 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.595 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:01.595 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.707 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:01.707 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.707 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:01.707 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.819 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:01.819 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.820 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:01.820 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.948 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:01.948 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:01.948 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:01.948 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:02.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:02.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:02.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:02.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:02.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:02.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:02.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:02.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:02.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:02.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:02.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:38:02.348 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:03.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:03.053 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:03.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:03.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:03.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:03.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:03.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:03.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:03.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:03.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:03.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:04.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:04.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:04.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:04.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.203 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:04.203 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:04.203 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-08.wav
+16:38:04.205 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:04.235 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:04.236 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.236 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:04.236 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:04.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:04.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.571 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:04.572 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:04.682 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:04.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:04.683 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.715 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:04.715 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:04.716 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-06.wav
+16:38:04.716 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:04.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:04.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:04.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.924 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:04.924 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.924 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:04.924 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:04.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:04.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:04.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:04.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:05.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:05.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:05.195 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:05.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:05.355 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:05.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:05.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:05.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:05.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.723 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:05.723 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:05.723 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:05.723 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:06.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:06.172 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:07.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:07.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:07.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.611 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:07.612 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:07.644 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:07.644 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.644 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:07.644 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:07.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:07.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.867 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:07.867 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.868 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:07.868 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:07.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:07.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:38:07.963 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:07.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:07.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:07.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:07.995 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:08.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:08.107 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:08.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:08.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:08.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:08.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:08.459 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:08.459 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.459 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:08.459 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:08.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:08.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:08.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:08.571 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:08.571 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.571 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:08.571 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:08.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:08.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:08.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:08.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:08.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:08.939 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:08.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:08.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:08.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-05.wav
+16:38:08.988 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:09.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:09.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:09.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:09.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:09.166 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:09.166 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:09.167 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-05.wav
+16:38:09.167 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:09.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:09.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:09.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:09.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:09.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.500 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:09.500 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:09.500 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-08.wav
+16:38:09.500 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:09.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:09.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:09.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:09.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:10.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:10.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.251 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:10.251 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.251 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:10.252 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.300 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:10.300 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:10.300 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/sounds/explosion-01.wav
+16:38:10.302 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:10.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:10.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:10.363 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:10.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:10.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:10.811 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:10.812 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:11.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:11.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:11.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:11.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:11.563 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:11.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:11.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.691 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:11.691 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:11.692 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-01.wav
+16:38:11.692 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:11.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:11.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:11.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:11.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:11.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:11.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:12.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:12.139 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:13.387 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:13.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:13.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:13.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:13.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:13.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:13.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:13.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:13.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:13.739 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:13.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:13.851 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.965 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:13.965 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:13.965 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:13.965 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:14.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:14.091 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:14.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:14.204 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:14.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.316 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:14.316 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:14.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:14.443 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:14.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:14.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:14.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:14.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:14.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:14.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:14.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:14.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:14.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:38:14.907 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:15.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:15.165 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:15.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:15.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:15.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:15.883 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:16.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:16.011 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:16.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:16.123 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:16.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:16.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:38:16.219 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:16.235 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:16.235 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.235 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:16.235 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:16.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:16.268 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-06.wav
+16:38:16.268 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:16.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:16.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:16.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:16.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:16.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:16.764 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:16.764 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:17.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:17.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:17.052 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:17.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:17.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:17.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:17.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:17.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:17.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-08.wav
+16:38:17.292 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:17.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:17.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:17.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:17.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:17.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:17.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:18.283 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:18.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:18.491 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:19.180 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:19.180 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.180 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:19.182 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.307 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:19.307 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.310 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:19.310 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.419 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:19.419 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.419 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:19.419 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:19.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:19.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.532 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:19.532 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:19.532 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:19.532 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:19.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:19.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:19.659 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:19.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:19.804 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:20.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:20.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:20.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:20.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:21.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:21.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:21.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.212 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:21.212 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:21.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:21.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-01.wav
+16:38:21.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:21.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:21.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:21.340 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:21.340 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.340 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:21.340 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:21.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:21.451 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:21.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:21.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:21.915 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:22.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:22.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.156 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:22.156 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.156 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:22.156 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:22.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:22.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:22.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:22.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:22.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:38:22.331 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:22.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:22.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:23.499 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:24.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:24.347 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:25.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:25.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:25.131 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:25.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.243 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:25.244 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.371 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:25.371 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.371 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:25.371 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:25.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:25.867 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:25.868 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:26.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:26.028 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:26.029 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:26.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:26.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:26.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:26.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:26.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:26.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:26.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:26.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.540 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:26.540 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:26.541 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-08.wav
+16:38:26.541 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:26.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:26.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:26.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.731 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:26.731 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.731 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:26.731 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:26.780 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:26.780 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:38:26.780 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:26.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:26.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:26.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:26.843 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:27.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:27.004 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:27.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:27.324 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:38:27.324 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:27.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:27.483 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:27.675 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:27.675 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.675 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:27.675 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.787 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:27.787 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.787 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:27.787 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:27.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:27.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:27.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:28.587 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:28.924 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:28.925 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:29.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:29.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:29.051 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:29.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:29.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:29.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:29.291 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:29.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:29.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-01.wav
+16:38:29.323 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:29.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:29.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:29.403 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:29.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:29.515 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:29.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:29.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:38:29.579 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:29.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:29.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:29.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:29.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:29.771 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:29.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:29.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:29.899 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:30.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:30.027 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:30.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:30.155 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:30.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:30.267 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:30.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:30.379 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.459 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:30.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:30.477 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:30.477 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:30.477 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:30.477 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:30.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:30.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:30.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:30.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:30.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:30.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:30.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:30.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:31.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:31.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:31.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.275 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:31.276 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.404 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:31.404 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.404 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:31.404 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.516 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:31.516 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.516 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:31.516 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:31.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:31.627 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:31.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:31.755 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:31.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:31.931 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:31.996 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:31.997 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:32.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:32.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:32.043 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:32.059 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:32.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:38:32.060 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:32.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:32.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:32.171 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:32.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:32.284 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:32.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:32.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:32.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:32.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.524 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:32.524 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:32.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:32.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:32.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.748 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.748 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.748 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.748 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.748 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.748 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:32.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:32.859 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:32.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:32.893 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:38:32.893 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:32.909 [JavaFX Application Thread] DEBUG EventBus             - Firing event: javafx.event.Event[source=javafx.event.Event$$Lambda$112/0x000000080021f040@657c74c2]
+16:38:32.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:32.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:32.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:32.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:32.987 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:33.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:33.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:33.099 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:33.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:33.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:33.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.260 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:33.260 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:33.260 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:33.260 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:33.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:33.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:33.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:33.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:33.531 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:33.532 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:33.643 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:34.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:34.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:34.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:34.427 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:34.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:34.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:34.555 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:34.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:34.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:34.667 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.715 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:34.715 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:34.715 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:34.715 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:34.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:34.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:34.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:34.779 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.891 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:34.891 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:34.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:34.892 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:34.971 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Seeker.png
+16:38:36.872 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Seeker.png
+16:38:36.874 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/Seeker_overlay.png
+16:38:36.921 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:36.922 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:37.611 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:37.613 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:37.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@80.0x80.0
+16:38:37.803 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@60.0x60.0
+16:38:37.804 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker_overlay.png@60.0x60.0
+16:38:38.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:38.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:38.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:38.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:38.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:38.395 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:38.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:38.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:38.460 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.476 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:38.476 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:38.476 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-06.wav
+16:38:38.476 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:38.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:38.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:38.524 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.524 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:38.524 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bouncer.png@63.5x76.0
+16:38:38.732 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:38.732 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:38.732 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:38:38.732 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:38.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:38.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:38.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:38.747 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.827 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:38.828 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:38.828 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:38:38.828 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:38.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:38.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:38.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:38.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:38.875 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:39.035 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@80.0x80.0
+16:38:39.036 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@60.0x60.0
+16:38:39.036 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker_overlay.png@60.0x60.0
+16:38:39.228 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:39.228 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:39.228 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:39.228 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:39.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/RedWanderer.png@80.0x80.0
+16:38:39.947 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:40.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:40.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:40.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:40.315 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:40.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:40.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:40.411 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.507 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:40.508 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:40.508 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-04.wav
+16:38:40.508 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:40.523 [JavaFX Application Thread] DEBUG EventBus             - Firing event: javafx.event.Event[source=javafx.event.Event$$Lambda$112/0x000000080021f040@657c74c2]
+16:38:40.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:40.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:40.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:40.619 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.651 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:40.651 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:40.651 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:38:40.651 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:40.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:40.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:40.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:40.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.763 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:40.764 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:40.764 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-07.wav
+16:38:40.764 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:40.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot6.wav
+16:38:40.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:40.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:40.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:40.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:41.163 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:41.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:41.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-02.wav
+16:38:41.164 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:41.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@80.0x80.0
+16:38:41.211 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@60.0x60.0
+16:38:41.212 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker_overlay.png@60.0x60.0
+16:38:41.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:41.339 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:42.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:42.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:42.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot3.wav
+16:38:42.396 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot4.wav
+16:38:42.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:42.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot1.wav
+16:38:42.492 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:42.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:42.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-08.wav
+16:38:42.523 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:42.587 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:42.588 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.588 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:42.588 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.589 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:42.589 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.635 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Wanderer.png@80.0x80.0
+16:38:42.636 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/wanderer_overlay.png@80.0x80.0
+16:38:42.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot8.wav
+16:38:42.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot5.wav
+16:38:42.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:42.699 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot2.wav
+16:38:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/shoot7.wav
+16:38:42.795 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Bullet.png
+16:38:42.811 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/explosion.png@3840.0x80.0
+16:38:42.811 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/particles/circle_05.png@32.0x32.0
+16:38:42.811 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/sounds/explosion-03.wav
+16:38:42.811 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/YellowCrystal.png
+16:38:42.971 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from file system: /assets/textures/RedSeeker.png
+16:38:42.990 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker.png@60.0x60.0
+16:38:42.991 [JavaFX Application Thread] DEBUG AssetLoaderService   - Loading from cache: /assets/textures/Seeker_overlay.png@60.0x60.0
+16:38:43.291 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+16:38:43.291 [JavaFX Application Thread] FATAL GameApplication      - Uncaught Exception:
+
+Fatal exception occurred: java.lang.IllegalArgumentException : No EntityFactory has a method annotated @Spawns(Runner)
+E: com.almasb.fxgl.entity.GameWorld.create(GameWorld.kt:392)
+E: com.almasb.fxgl.entity.GameWorld.spawn(GameWorld.kt:375)
+E: com.almasb.fxgl.entity.GameWorld.spawn(GameWorld.kt:363)
+E: com.almasb.fxgl.entity.GameWorld.spawn(GameWorld.kt:338)
+E: com.almasb.fxgl.dsl.FXGL$Companion.spawn(FXGL.kt:420)
+E: com.almasb.fxgl.dsl.FXGL.spawn(FXGL.kt)
+E: geowars.Main.lambda$initGame$14(Main.java:139)
+E: com.almasb.fxgl.time.TimerAction.update(TimerAction.kt:69)
+E: com.almasb.fxgl.time.Timer.update(Timer.kt:38)
+E: com.almasb.fxgl.scene.Scene.update(Scene.kt:74)
+E: com.almasb.fxgl.app.MainWindow$update$1.invoke(MainWindow.kt:209)
+E: com.almasb.fxgl.app.MainWindow$update$1.invoke(MainWindow.kt:39)
+E: com.almasb.fxgl.core.fsm.StateMachine.runOnActiveStates(StateMachine.kt:60)
+E: com.almasb.fxgl.app.MainWindow.update(MainWindow.kt:209)
+E: com.almasb.fxgl.app.services.WindowService.onUpdate(WindowService.kt:123)
+E: com.almasb.fxgl.app.Engine.loop(Engine.kt:135)
+E: com.almasb.fxgl.app.Engine.access$loop(Engine.kt:25)
+E: com.almasb.fxgl.app.Engine$loop$1.invoke(Engine.kt:29)
+E: com.almasb.fxgl.app.Engine$loop$1.invoke(Engine.kt:25)
+E: com.almasb.fxgl.app.LoopRunner.frame(LoopRunner.kt:86)
+E: com.almasb.fxgl.app.LoopRunner.access$frame(LoopRunner.kt:17)
+E: com.almasb.fxgl.app.LoopRunner$impl$2$1.handle(LoopRunner.kt:37)
+E: javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+E: java.base/java.security.AccessController.doPrivileged(Native Method)
+E: javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+E: com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+E: com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:559)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:543)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:536)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:342)
+E: com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+E: com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+E: com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+E: java.base/java.lang.Thread.run(Thread.java:834)
+
+16:38:43.291 [JavaFX Application Thread] FATAL GameApplication      - Application will now exit
+16:38:43.302 [JavaFX Application Thread] DEBUG MainWindow           - Push state: ErrorSubScene
+16:38:43.302 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:38:43.311 [JavaFX Application Thread] DEBUG WindowService        - Removing overlay from GameScene and adding to ErrorSubScene
+16:38:43.311 [JavaFX Application Thread] DEBUG MainWindow           - GameScene -> ErrorSubScene
+16:38:51.709 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+16:38:51.709 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+16:38:51.709 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX

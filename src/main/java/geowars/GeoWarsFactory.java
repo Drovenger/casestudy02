@@ -1,6 +1,7 @@
 package geowars;
 
 import com.almasb.fxgl.core.math.FXGLMath;
+import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.dsl.components.*;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
@@ -11,6 +12,7 @@ import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import geowars.component.*;
 import geowars.component.enemy.BouncerComponent;
+import geowars.component.enemy.SeekerComponent;
 import geowars.component.enemy.WandererComponent;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
@@ -102,7 +104,24 @@ public class GeoWarsFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("Seeker")
+    public Entity spawnSeeker(SpawnData data) {
+        boolean red = FXGLMath.randomBoolean((float)config.getRedEnemyChance());
 
+        int moveSpeed = red ? config.getRedEnemyMoveSpeed()
+                : FXGLMath.random(150, config.getSeekerMaxMoveSpeed());
+
+        var t = texture(red ? "RedSeeker.png" : "Seeker.png", 80, 80).brighter();
+
+        return entityBuilder()
+                .type(SEEKER)
+                .at(getRandomSpawnPoint())
+                .viewWithBBox(texture("Seeker.png", 60, 60).brighter())
+                .with(new HealthComponent(red ? config.getRedEnemyHealth() : config.getEnemyHealth()))
+                .with(new CollidableComponent(true))
+                .with(new SeekerComponent(FXGL.<Main>getAppCast().getPlayer(), moveSpeed,t))
+                .build();
+    }
 
     @Spawns("Bouncer")
     public Entity spawnBouncer(SpawnData data) {
